@@ -1,28 +1,40 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// routes.jsx
+import React ,{Component} from 'react'
+
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch
+  } from 'react-router-dom';
+
+import Home from './components/pages/home'
+import {Whoops404} from './components/pages/commonPages'
+import Feed from './components/pages/feedComponent';
+import Card from './components/pages/myFirstComponent';
+import HSL from './components/pages/hsl'
+import RGB from './components/pages/rgb'
+import Yellow from './components/pages/yellow'
+
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    <Router>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/feed" component={Feed} />
+            <Route path="/card" component={Card} />
+          
+            <Route path="/hsl/:h/:s/:l" component={HSL} />
+            <Route path="/rgb/:r/:g/:b" component={RGB} />
+            <Route path="/yellow" component={Yellow} />
+            <Route component={Whoops404} />
+        </Switch>
+    </Router>
+     )
+    }
   }
-}
 
-export default App;
+export default App
