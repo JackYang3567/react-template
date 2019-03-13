@@ -34,27 +34,16 @@ class NavHeakerBar extends Component {
        <header className="css-header">
           <div className="css-main">
             <div className="css-iiezwn">
-                <Link to='/' activeStyle={selectedStyle}
-                >
+                <Link to='/' className="css-hobwqm" activeStyle={selectedStyle}>
                   <Img src={logo} alt={alt} className="App-logo"  {... this.props} />
                   <span className="css-184keb2">React</span>
                   </Link>
 
                <nav className="css-79txt3">
-               <Link to='/feed' className="css-hobwqm"
-                    name='docs'
-                    active={activeItem === 'docs'}
-                    onClick={this.handleItemClick}
-                    href='/feed'
-                  > 
+               <Link to='/feed' className="css-hobwqm" activeStyle={selectedStyle}> 
                   文档 
                   </Link>
-                  <Link to='/card' className="css-hobwqm"
-                    name='tutorial'
-                    active={activeItem === 'tutorial'}
-                    onClick={this.handleItemClick}
-                   
-                  >                  
+                  <Link to='/card' className="css-hobwqm" activeStyle={selectedStyle}>                  
                   教程
                   </Link>
                  
