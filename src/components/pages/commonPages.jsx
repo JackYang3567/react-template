@@ -8,7 +8,7 @@ export const Whoops404 = ({ location }) =>
   <Master>
     <div className="css-main">
        <div className="css-container">
-           <h1>没找到请求的页面资源 '{location.pathname}'</h1>
+           <h1>=没找到请求的页面资源 '{location.pathname}'</h1>
        </div>
     </div>
  </Master>
