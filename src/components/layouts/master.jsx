@@ -5,6 +5,7 @@ import '../../assets/stylesheets/App.css';
 import NavHeaderBar from './navHeaderBar';
 import NavBooterBar from './navFooterBar';
 import NavFloatFooterBar from './navFloatFooterBar'
+import BackToTop from '../ui/BackToTop'
 
 class Master extends Component {
   render() {
@@ -16,6 +17,7 @@ class Master extends Component {
             </main>
             <NavBooterBar />
             <NavFloatFooterBar id="navfloat" />
+            <BackToTop />
       </div>
     );
   }

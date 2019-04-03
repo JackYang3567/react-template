@@ -22,7 +22,7 @@ class NavHeakerBar extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { activeItem } = this.state
+   // const { activeItem } = this.state
     
     const selectedStyle = {
       backgroundColor: "white",
@@ -47,20 +47,10 @@ class NavHeakerBar extends Component {
                   教程
                   </Link>
                  
-                  <Link to='/blog' className="css-hobwqm"
-                    name='blog'
-                    active={activeItem === 'blog'}
-                    onClick={this.handleItemClick}
-                   
-                  >        
+                  <Link to='/blog' className="css-hobwqm" activeStyle={selectedStyle}>        
                   博客
                   </Link>
-                  <Link to='/community' className="css-hobwqm"
-                    name='community'
-                    active={activeItem === 'community'}
-                    onClick={this.handleItemClick}
-                  
-                  >
+                  <Link to='/community' className="css-hobwqm" activeStyle={selectedStyle}>
                   社区
                   </Link>
                </nav>

@@ -7,10 +7,11 @@ import {
     Switch
   } from 'react-router-dom';
 
-import Home from './components/pages/home'
-import {Whoops404} from './components/pages/commonPages'
+import Home from './components/pages/homeComponent'
+import {Whoops404} from './components/pages/commonPagesComponent'
 import Feed from './components/pages/feedComponent';
-import Card from './components/pages/myFirstComponent';
+import Card from './components/pages/cardComponent';
+import Blog from './components/pages/blogComponent';
 import HSL from './components/pages/hsl'
 import RGB from './components/pages/rgb'
 import Yellow from './components/pages/yellow'
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/feed" component={Feed} />
             <Route path="/card" component={Card} />
+            <Route path="/blog" component={Blog} />
           
             <Route path="/hsl/:h/:s/:l" component={HSL} />
             <Route path="/rgb/:r/:g/:b" component={RGB} />
